@@ -39,11 +39,10 @@ const Turn = (fighter_attack,fighter_victim,point)=> {
 }
 
 const isKnockout = (fighter) => {
-    return fighter.health < 0 ? true : false;}
+    return fighter.health <= 0 ? true : false;}
 
 const GameOver = async (fighter) => {
 await fighter.knockout();
  console.log(fighter.name + " die!")
-
 }
 
